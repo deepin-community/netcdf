@@ -1,0 +1,26 @@
+Description: Use local logo image to fix privacy-breach-logo lintian error.
+Author: Bas Couwenberg <sebastic@xs4all.nl>
+Forwarded: not-needed
+
+--- a/docs/footer.html
++++ b/docs/footer.html
+@@ -9,7 +9,7 @@
+   <hr size="2" />
+   <address style="text-align: center;">
+     <a href="http://www.unidata.ucar.edu/software/netcdf/">Return to the Main Unidata NetCDF page.</a><br>
+-    <img src="http://www.unidata.ucar.edu/images/logos/uniLogo.png">
++    <img src="unidata_logo_cmyk.png">
+   </address>
+ 
+   <address style="text-align: right;"><small>
+--- a/docs/obsolete/fan_utils.html
++++ b/docs/obsolete/fan_utils.html
+@@ -2,7 +2,7 @@
+ 
+ <head>
+ <!-- InstanceBeginEditable name="Title" -->
+-<TITLE>Introduction to FAN Language and Utilities </TITLE>    <link rel="shortcut icon" href="http://www.unidata.ucar.edu/favicon.ico" type="image/x-icon" />
++<TITLE>Introduction to FAN Language and Utilities </TITLE>
+ 
+ </head>
+ 

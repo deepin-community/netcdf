@@ -1,0 +1,50 @@
+Description: Append HDF5 library & include paths to nc-config & netcdf.pc.
+ Fixes linking issues with netcdf and the hdf5 libraries it's built with:
+  /usr/bin/ld: cannot find -lhdf5_hl
+  /usr/bin/ld: cannot find -lhdf5
+Author: Bas Couwenberg <sebastic@debian.org>
+Forwarded: not-needed
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2067,6 +2067,17 @@ SET(libdir ${CMAKE_INSTALL_PREFIX}/${CMA
+ SET(includedir ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR})
+ SET(CC ${CMAKE_C_COMPILER})
+ 
++SET(HDF5_LIBS "")
++SET(HDF5_INCS "")
++
++IF(USE_HDF5 AND DEFINED HDF5_LIBRARY_PATH)
++  SET(HDF5_LIBS "-L${HDF5_LIBRARY_PATH}")
++ENDIF(USE_HDF5 AND DEFINED HDF5_LIBRARY_PATH)
++
++IF(USE_HDF5 AND DEFINED HDF5_INCLUDE_PATH)
++  SET(HDF5_INCS "-I${HDF5_INCLUDE_PATH}")
++ENDIF(USE_HDF5 AND DEFINED HDF5_LIBRARY_PATH)
++
+ # Process all dependency libraries and create a string
+ # used when parsing netcdf.pc.in
+ 
+--- a/nc-config.cmake.in
++++ b/nc-config.cmake.in
+@@ -10,8 +10,8 @@ libdir="@CMAKE_INSTALL_PREFIX@/@CMAKE_IN
+ includedir="@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@"
+ 
+ cc="@CMAKE_C_COMPILER@"
+-cflags="-I@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@"
+-libs="-L@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@ @NC_LIBS@"
++cflags="-I@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@ @HDF5_INCS@"
++libs="-L@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@ @HDF5_LIBS@ @NC_LIBS@"
+ libsprivate="@LIBS@"
+ HAS_STATIC=""
+ 
+--- a/netcdf.pc.in
++++ b/netcdf.pc.in
+@@ -9,5 +9,5 @@ Description: NetCDF Client Library for C
+ URL: http://www.unidata.ucar.edu/netcdf
+ Version: @PACKAGE_VERSION@
+ Libs: -L${libdir} @NC_LIBS@
+-Libs.private: @LIBS@
+-Cflags: -I${includedir}
++Libs.private: @LIBS@ @HDF5_LIBS@
++Cflags: -I${includedir} @HDF5_INCS@

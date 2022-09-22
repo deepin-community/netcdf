@@ -1,0 +1,93 @@
+Source: netcdf
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: Francesco Paolo Lovergine <frankie@debian.org>,
+           Nico Schlömer <nico.schloemer@gmail.com>,
+           Bas Couwenberg <sebastic@debian.org>
+Section: science
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               cmake (>= 3.6.1),
+               chrpath,
+               m4,
+               doxygen,
+               graphviz,
+               libhdf5-dev (>= 1.8.6-1~),
+               libcurl4-gnutls-dev | libcurl-ssl-dev
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/debian-gis-team/netcdf
+Vcs-Git: https://salsa.debian.org/debian-gis-team/netcdf.git
+Homepage: http://www.unidata.ucar.edu/software/netcdf/
+
+Package: netcdf-doc
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}
+Description: Documentation for NetCDF
+ NetCDF (network Common Data Form) is an interface for scientific
+ data access and a freely-distributed software library that provides an
+ implementation of the interface.  The netCDF library also defines a
+ machine-independent format for representing scientific data.
+ Together, the interface, library, and format support the creation,
+ access, and sharing of scientific data.
+ .
+ This package contains documentation for the NetCDF library in a
+ variety of formats.
+
+Package: libnetcdf19
+Architecture: any
+Multi-Arch: same
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Breaks: libnetcdfc7 (<= 4.2.0),
+        libnetcdf6 (<< 1:4.1.1-7~)
+Replaces: libnetcdfc7 (<= 4.2.0),
+          libnetcdf6 (<< 1:4.1.1-7~)
+Description: Interface for scientific data access to large binary data
+ NetCDF (network Common Data Form) is an interface for scientific
+ data access and a freely-distributed software library that provides an
+ implementation of the interface.  The netCDF library also defines a
+ machine-independent format for representing scientific data.
+ Together, the interface, library, and format support the creation,
+ access, and sharing of scientific data.
+ .
+ This package contains the C run-time shared libraries required
+ by programs.
+
+Package: libnetcdf-dev
+Architecture: any
+Section: libdevel
+Depends: libnetcdf19 (= ${binary:Version}),
+         libhdf5-dev (>= 1.8.6-1~),
+         libcurl4-gnutls-dev | libcurl-ssl-dev,
+         ${misc:Depends}
+Recommends: pkg-config
+Breaks: netcdf-bin (<< 1:4.3.3.1)
+Replaces: netcdf-bin (<< 1:4.3.3.1)
+Suggests: netcdf-bin,
+          netcdf-doc
+Description: creation, access, and sharing of scientific data
+ NetCDF (network Common Data Form) is a set of interfaces for array-oriented
+ data access and a freely distributed collection of data access libraries for
+ C, Fortran, C++, Java, and other languages. The netCDF libraries support a
+ machine-independent format for representing scientific data. Together, the
+ interfaces, libraries, and format support the creation, access, and sharing of
+ scientific data.
+ .
+ This package provides headers.
+
+Package: netcdf-bin
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Programs for reading and writing NetCDF files
+ Contains the programs ncdump and ncgen which convert NetCDF
+ files to ASCII and back, respectively. NetCDF (network Common Data
+ Form) is an interface for scientific data access and a
+ freely-distributed software library that provides an implementation
+ of the interface.  The netCDF library also defines a
+ machine-independent format for representing scientific data.
+ Together, the interface, library, and format support the creation,
+ access, and sharing of scientific data.

@@ -1,0 +1,43 @@
+'\" -*- coding: us-ascii -*-
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH nc-config 1 "15 January 2015" "" ""
+.SH NAME
+nc-config \- query netCDF build options
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBnc-config\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[\fB--libs\fR] [\fB--cflags\fR] [\fB--cxxflags\fR] [\fB--defines\fR] [\fB--includes\fR] [\fB--version\fR]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+\fBnc-config\fR allows querying the options used to
+build the netCDF C library.
+.SH OPTIONS
+.TP 
+\*(T<\fB\-\-libs\fR\*(T>
+Libraries
+.TP 
+\*(T<\fB\-\-cflags\fR\*(T>
+Compiler flags
+.TP 
+\*(T<\fB\-\-cxxlibs\fR\*(T>
+C++ Compiler flags
+.TP 
+\*(T<\fB\-\-defines\fR\*(T>
+Compiler defines
+.TP 
+\*(T<\fB\-\-includes\fR\*(T>
+Compiler includes
+.TP 
+\*(T<\fB\-\-version\fR\*(T>
+library version

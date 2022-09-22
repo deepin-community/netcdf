@@ -1,0 +1,32 @@
+Description: Fix linking to libhdf5 in addition to libnetcdf.
+ Build failed with:
+  /usr/bin/cc  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2    -Wl,-z,relro -Wl,-z,now CMakeFiles/tst_fileinfo.dir/tst_fileinfo.c.o  -o tst_fileinfo -rdynamic ../liblib/libnetcdf.so.11.2.0 -Wl,-rpath,"/build/netcdf-4.4.1~rc2/obj-x86_64-linux-gnu/liblib" 
+  /usr/bin/ld: CMakeFiles/tst_fileinfo.dir/tst_fileinfo.c.o: undefined reference to symbol 'H5check_version@@HDF5_SERIAL_1.8.7'
+  //usr/lib/x86_64-linux-gnu/libhdf5_serial.so.10: error adding symbols: DSO missing from command line
+Author: Bas Couwenberg <sebastic@debian.org>
+Forwarded: not-needed
+
+--- a/ncdump/CMakeLists.txt
++++ b/ncdump/CMakeLists.txt
+@@ -122,6 +122,21 @@ IF(ENABLE_TESTS)
+   IF(USE_HDF5)
+     ADD_EXECUTABLE(tst_fileinfo tst_fileinfo.c)
+     TARGET_LINK_LIBRARIES(tst_fileinfo netcdf)
++    IF(USE_HDF5 OR USE_NETCDF4)
++      # Some version of cmake define HDF5_hdf5_LIBRARY instead of
++      # HDF5_LIBRARY. Same with HDF5_HL_LIBRARIES
++      IF(HDF5_hdf5_LIBRARY AND NOT HDF5_C_LIBRARIES)
++        SET(HDF5_C_LIBRARIES ${HDF5_hdf5_LIBRARY})
++      ENDIF()
++      IF(HDF5_hdf5_hl_LIBRARY AND NOT HDF5_HL_LIBRARIES)
++        SET(HDF5_HL_LIBRARIES ${HDF5_hdf5_hl_LIBRARY})
++      ENDIF()
++      # The order of the libraries is important here for static
++      # builds:
++      # Make sure that HDF5_C_LIBRARY appears *after*
++      # HDF5_HL_LIBRARY.
++      TARGET_LINK_LIBRARIES(tst_fileinfo ${HDF5_HL_LIBRARIES} ${HDF5_C_LIBRARIES})
++    ENDIF()
+   ENDIF()
+ 
+   IF(MSVC)

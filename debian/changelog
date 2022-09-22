@@ -1,0 +1,1091 @@
+netcdf (1:4.8.1-1) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.0, no changes.
+  * Bump debhelper compat to 12, changes:
+    - Drop --list-missing from dh_install
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 29 Sep 2021 11:36:14 +0200
+
+netcdf (1:4.8.1-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Update symbols for 4.8.1.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 21 Aug 2021 06:46:43 +0200
+
+netcdf (1:4.8.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump watch file version to 4.
+  * Update lintian overrides.
+  * Bump Standards-Version to 4.5.1, no changes.
+  * Update watch file for GitHub URL changes.
+  * Update copyright file.
+  * Rename library package for SONAME bump.
+  * Refresh patches.
+  * Update symbols for 4.8.0.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 31 Mar 2021 05:40:30 +0200
+
+netcdf (1:4.7.4-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 21 Apr 2020 21:56:21 +0200
+
+netcdf (1:4.7.4-1~exp2) experimental; urgency=medium
+
+  * Add patch to add forward declarations for byteswap8 & byteswap4.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 03 Apr 2020 20:14:12 +0200
+
+netcdf (1:4.7.4-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.5.0, no changes.
+  * Bump debhelper compat to 10, changes:
+    - Drop --parallel option, enabled by default
+  * Rename library package for SONAME bump.
+  * Refresh patches.
+  * Update symbols for 4.7.4.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 28 Mar 2020 15:28:34 +0100
+
+netcdf (1:4.7.3-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 23 Jan 2020 05:18:16 +0100
+
+netcdf (1:4.7.3-1~exp2) experimental; urgency=medium
+
+  * Drop Name field from upstream metadata.
+  * Update copyright file, changes:
+    - Add license & copyright for CODE_OF_CONDUCT.md.
+    (closes: #947976)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 03 Jan 2020 07:58:32 +0100
+
+netcdf (1:4.7.3-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Update file-references-package-build-path lintian override.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 21 Nov 2019 05:31:58 +0100
+
+netcdf (1:4.7.2-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.4.1, no changes.
+  * Refresh patches.
+  * Drop unused override for file-references-package-build-path.
+  * Update symbols for 4.7.2.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 23 Oct 2019 09:39:43 +0200
+
+netcdf (1:4.7.1-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update gbp.conf to use --source-only-changes by default.
+  * Bump Standards-Version to 4.4.0, no changes.
+  * Update copyright file, changes:
+    - Add license & copyright for file still under NetCDF license
+  * Update symbols for 4.7.1.
+  * Drop unused override for spelling-error-in-binary.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 30 Aug 2019 10:26:47 +0200
+
+netcdf (1:4.7.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update copyright file, changes:
+    - Update copyright years for Unidata
+    - Add license & copyright for H5FDhttp sources
+  * Drop patches included upstream, refresh remaining patches.
+  * Update symbols for 4.7.0.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 30 Apr 2019 07:08:56 +0200
+
+netcdf (1:4.6.3-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Add upstream patches to remove build path from binaries.
+  * Drop unused lintian overrides.
+  * Refresh patches.
+  * Drop unused pkg-config-references-unknown-shared-library override.
+  * Rename library packages for SONAME bump.
+  * Update reproducible-settings.patch to remove build path.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 02 Mar 2019 09:01:59 +0100
+
+netcdf (1:4.6.2.1-1~exp2) experimental; urgency=medium
+
+  * Remove arch specific NC_byteswap8 from symbols file.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 16 Feb 2019 14:13:27 +0100
+
+netcdf (1:4.6.2.1-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.3.0, no changes.
+  * Update copyright file, changes:
+    - Update license from NetCDF to BSD-3-Clause
+  * Refresh patches.
+  * Update symbols for 4.6.2.1.
+  * Append -DNDEBUG to CFLAGS to remove buildpath from binaries.
+  * Add lintian overrides for file-references-package-build-path.
+  * Add lintian override for pkg-config-references-unknown-shared-library.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 16 Feb 2019 08:12:22 +0100
+
+netcdf (1:4.6.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Strip pre-releases from symbols version.
+  * Update symbols for 4.6.2.
+  * Update copyright file, remove ncaux.c.
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 20 Nov 2018 07:04:35 +0100
+
+netcdf (1:4.6.2~rc2-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Add Build-Depends-Package field to symbols file.
+  * Drop manpage patch, fixed upstrema. Refresh remaining patches.
+  * Rename library package for SONAME bump revert.
+  * Update symbolks for 4.6.2~rc2.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 02 Nov 2018 07:50:03 +0100
+
+netcdf (1:4.6.2~rc1-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Bump Standards-Version to 4.2.1, no changes.
+  * Update watch file to limit matches to archive path.
+  * Refresh patches.
+  * Rename library package for SONAME bump.
+  * Update symbols for 4.6.2~rc1.
+  * Add patch to fix manpage: warning: macro `NP' not defined.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 21 Sep 2018 07:21:42 +0200
+
+netcdf (1:4.6.1-3) unstable; urgency=medium
+
+  * Drop autopkgtest to test installability.
+  * Add lintian override for testsuite-autopkgtest-missing.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 01 Aug 2018 07:36:48 +0200
+
+netcdf (1:4.6.1-2) unstable; urgency=medium
+
+  * Update Vcs-* URLs for Salsa.
+  * Drop override for vcs-deprecated-in-debian-infrastructure.
+  * Bump Standards-Version to 4.1.5, no changes.
+  * Strip trailing whitespace from control & rules files.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 19 Jul 2018 15:18:57 +0200
+
+netcdf (1:4.6.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Don't use libjs-jquery for Doxygen docs.
+  * Add lintian override for vcs-deprecated-in-debian-infrastructure.
+  * Drop big-endian.patch, applied upstream. Refresh remaining patches.
+  * Update symbols for 4.6.1.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 20 Mar 2018 07:30:46 +0100
+
+netcdf (1:4.6.0-2) unstable; urgency=medium
+
+  * Bump minimum required CMake version to 3.6.1.
+  * Add patch to fix FTBFS on big-endian architectures.
+  * Add NC_byteswap8 to symbols file for big-endian architectures.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 25 Jan 2018 22:06:33 +0100
+
+netcdf (1:4.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update copyright-format URL to use HTTPS.
+  * Update copyright years for Unidata.
+  * Drop cross.patch, applied upstream. Refresh remaining patches.
+  * Bump Standards-Version to 4.1.3, no changes.
+  * Update symbols for 4.6.0.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 25 Jan 2018 19:32:27 +0100
+
+netcdf (1:4.5.0-2) unstable; urgency=medium
+
+  * Strip trailing whitespace from changelog.
+  * Add patch by Helmut Grohne to fix cross building.
+    (closes: #885845)
+  * Bump Standards-Version to 4.1.2, no changes.
+  * Add Multi-Arch fields suggested by Multiarch hinter.
+  * Drop obsolete dbg package.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 30 Dec 2017 11:59:33 +0100
+
+netcdf (1:4.5.0-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 26 Oct 2017 10:14:39 +0200
+
+netcdf (1:4.5.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Mark mmapio_* symbols as not available on hurd & kfreebsd.
+  * Update symbols for 4.5.0.
+  * Strip pre-releases from symbols version.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 21 Oct 2017 09:30:59 +0200
+
+netcdf (1:4.5.0~rc3-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Change priority from extra to optional.
+  * Bump Standards-Version to 4.1.1, changes: priority.
+  * Update copyright years for Northwestern University.
+  * Refresh patches.
+  * Update symbols for 4.5.0~rc3.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 30 Sep 2017 10:14:33 +0200
+
+netcdf (1:4.5.0~rc2-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update copyright file, changes:
+    - Update license for ncgeny.{c,h} to GPL-3+ with Bison exception
+    - Drop license & copyright for ConvertUTF.{c,h}, removed upstream
+  * Bump Standards-Version to 4.0.0, no changes.
+  * Add autopkgtest to test installability.
+  * Use pkg-info.mk variables instead of dpkg-parsechangelog output.
+  * Update symbols for 4.5.0~rc2.
+  * Add lintian override for spelling-error-in-binary false positive.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 08 Aug 2017 08:02:08 +0200
+
+netcdf (1:4.5.0~rc1-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update copyright file, changes:
+    - Update copyright years for Unidata
+    - Add license & copyright for new files
+    - Rename MIT license shortname to Expat
+  * Refresh patches.
+  * Rename library package for SONAME bump.
+  * Update symbols for 4.5.0~rc1.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 06 Jun 2017 08:39:20 +0200
+
+netcdf (1:4.4.1.1-2) unstable; urgency=medium
+
+  * Enable PIE hardening buildflags.
+    (closes: #859430)
+  * Drop unused lintian overrides for hardening-no-pie.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 04 Apr 2017 08:09:19 +0200
+
+netcdf (1:4.4.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patches applied upstream, refresh remaining patches.
+  * Update symbols for 4.4.1.1.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 22 Nov 2016 07:24:16 +0100
+
+netcdf (1:4.4.1-2) unstable; urgency=medium
+
+  * Add patch to fix HDF5 include directory with CMake >= 3.6.0.
+    (closes: #835710)
+  * Add patch to fix spelling errors.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 28 Aug 2016 15:47:11 +0200
+
+netcdf (1:4.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update copyright years in copyright file.
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 29 Jun 2016 00:59:22 +0200
+
+netcdf (1:4.4.1~rc3-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Drop source_date_epoch.patch, applied upstream.
+  * Update watch file to handle more tag conventions in filenamemangle.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 21 Jun 2016 07:44:10 +0200
+
+netcdf (1:4.4.1~rc2-1~exp3) experimental; urgency=medium
+
+  * Add patch to use SOURCE_DATE_EPOCH instead of current date.
+  * Add patch to make the libnetcdf.settings file reproducible.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 05 Jun 2016 19:00:43 +0200
+
+netcdf (1:4.4.1~rc2-1~exp2) experimental; urgency=medium
+
+  * Drop SOVERSION patch, SONAME bump in RC1 was not required.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 15 May 2016 13:01:19 +0200
+
+netcdf (1:4.4.1~rc2-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Refresh patches.
+  * Add patch to fix tst_fileinfo linking to libhdf5.
+  * Add patch to revert SOVERSION decrement.
+  * Update symbols for 4.4.1-rc2.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 14 May 2016 13:35:06 +0200
+
+netcdf (1:4.4.1~rc1-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Drop patches applied upstream.
+  * Bump Standards-Version to 3.9.8, no changes.
+  * Update copyright file, update copyright years for Unidata.
+  * Rename library package for SONAME bump.
+  * Update privacy-breach-logo.patch to also remove favicon link.
+  * Update symbols for 4.4.1-rc1.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 16 Apr 2016 18:41:28 +0200
+
+netcdf (1:4.4.0-2) unstable; urgency=medium
+
+  * Update Vcs-Git URL to use HTTPS.
+  * Bump Standards-Version to 3.9.7, no changes.
+  * Add build dependency on graphviz for dot.
+  * Enable all hardening buildflags, except PIE (breaks the build).
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 27 Mar 2016 13:43:30 +0200
+
+netcdf (1:4.4.0-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 21 Jan 2016 20:00:17 +0100
+
+netcdf (1:4.4.0-1~exp2) experimental; urgency=medium
+
+  * Add patch to fix conflicting type errors on arm.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 17 Jan 2016 15:42:03 +0100
+
+netcdf (1:4.4.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update copyright file, add license & copyright for Bison files.
+  * Rename library package for SONAME bump.
+  * Add patch for 'attributes' typo.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 15 Jan 2016 02:21:00 +0100
+
+netcdf (1:4.4.0~rc5-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 12 Nov 2015 11:17:53 +0100
+
+netcdf (1:4.4.0~rc4-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+    - Includes fixes for inconsistent return types.
+      (closes: 749511)
+  * Update copyright for new files.
+  * Drop inconsistent-return-type.patch, applied upstream.
+    Refresh remaining patches.
+  * Update symbols for 4.4.0 RC4.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 11 Nov 2015 22:16:31 +0100
+
+netcdf (1:4.4.0~rc3-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 01 Nov 2015 20:41:08 +0100
+
+netcdf (1:4.4.0~rc3-1~exp2) experimental; urgency=medium
+
+  * Enable tests, but disable parallel execution.
+  * Strip RPATH after dh_auto_install, RPATH required for tests.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 25 Oct 2015 13:55:32 +0100
+
+netcdf (1:4.4.0~rc3-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update Vcs-Browser URL to use HTTPS.
+  * Update symbols for 4.4.0-rc3.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 24 Oct 2015 18:59:45 +0200
+
+netcdf (1:4.4.0~rc2-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 19 Aug 2015 19:21:34 +0200
+
+netcdf (1:4.4.0~rc2-1~exp4) experimental; urgency=medium
+
+  * Add patch to append the HDF5 library & include paths in nc-config &
+    netcdf.pc.
+  * Switch back to building with the HDF5 serial variant instead of MPI only.
+    (reopens: #708638)
+  * Replace uppercase RC with lowercase rc in uversionmangle.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 31 Jul 2015 13:24:30 +0200
+
+netcdf (1:4.4.0~rc2-1~exp3) experimental; urgency=medium
+
+  * Change libhdf5-openmpi-dev (build) dependency to libhdf5-mpi-dev,
+    this pulls in libhdf5-openmpi-dev & mpi-default-dev required to build
+    with the same compiler used for HDF5.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 29 Jul 2015 13:18:47 +0200
+
+netcdf (1:4.4.0~rc2-1~exp2) experimental; urgency=medium
+
+  * Update watch file to handle other tar extensions in filenamemangle.
+  * Add dependencies on hdf5 & curl -dev packages to libnetcdf-dev.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 28 Jul 2015 01:22:07 +0200
+
+netcdf (1:4.4.0~rc2-1~exp1) experimental; urgency=medium
+
+  * Add libcurl-ssl-dev as alternative for libcurl-gnutls-dev build dependency.
+  * New upstream release candidate.
+  * Refresh patches.
+  * Update symbols for 4.4.0~rc2.
+  * Drop Files-Excluded from copyright & repacksuffix from watch file,
+    autom4te.cache/ no longer included.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 25 Jul 2015 02:12:24 +0200
+
+netcdf (1:4.3.3.1+ds-1~exp2) experimental; urgency=medium
+
+  * Add Breaks/Replaces for nc-config move from -bin to -dev package.
+    (closes: #788464)
+  * Override dh_install to use --list-missing.
+  * Also include libnetcdf.settings in -dev package.
+  * Install manpages via .install files.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 11 Jun 2015 22:03:39 +0200
+
+netcdf (1:4.3.3.1+ds-1~exp1) experimental; urgency=medium
+
+  [ Nico Schlömer ]
+  * Upgrade to 4.3.3.1 (C-only)
+    (Closes: #735075)
+  * Fix segfault with malformed URLs (Closes: #757884)
+  * Fix ncdump crash with exit status 139 (Closes: #716126)
+  * Fix nccopy crash with exit status 139 (Closes: #716601)
+  * Proper multiarch support (Closes: #676477)
+  * Parallel build of hdf5 now detected (Closes: #708638)
+  * Switch to CMake build
+  * Add myself to Uploaders.
+  * Remove unnecessary dependency on dpkg (>= 1.15.4) | install-info.
+  * Shorten synopsis of libnetcdf-dev.
+
+  [ Bas Couwenberg ]
+  * Update watch file to use GitHub releases.
+  * Add gbp.conf to use pristine-tar by default.
+  * Use canonical Vcs-* URLs.
+  * Bump debhelper compatibility to 9.
+  * Restructure control file with cme.
+  * Remove duplicate section from netcdf-bin.
+  * Enable verbose make output.
+  * Enable parallel builds.
+  * Override dh_strip to use netcdf-dbg explicitly.
+  * Add DEP3 headers to link-private.patch.
+  * Fix privacy-breach-logo lintian error by using the local copy.
+  * Remove unused substitution variable ${shlibs:Depends} from libnetcdf-dev.
+  * Use libjs-jquery instead of jquery.js from Doxygen.
+  * Add patch to fix 'absence' typo in ncgen man page.
+  * Move nc-config from netcdf-bin to libnetcdf-dev.
+  * Install RELEASE_NOTES.md as upstream changelog.
+  * Add patch to fix hyphen-used-as-minus-sign lintian issues in man pages.
+  * Add man page for nc-config.
+  * Update copyright file using copyright-format 1.0.
+  * Add symbols file for libnetcdf.
+  * Add upstream metadata.
+  * Drop README.source, no longer applicable.
+  * Bump Standards-Version to 3.9.6, changes: canonical Vcs-* URLs,
+    minimal dh rules, copyright-format 1.0, symbols.
+  * Add myself to Uploaders.
+  * Repack upstream tarball to exclude autom4te.cache directory.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Thu, 19 Mar 2015 22:35:59 +0100
+
+netcdf (1:4.1.3-7.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * use dh-autoreconf to build, to cope with newer architectures. Thanks
+    to Fernando Seiti Furusato for the patch. Closes: #755829
+
+ -- Steve McIntyre <93sam@debian.org>  Fri, 03 Oct 2014 13:21:45 +0100
+
+netcdf (1:4.1.3-7.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Support hdf5 1.8.13 new packaging layout (Closes: #756687).
+
+ -- Gilles Filippini <pini@debian.org>  Thu, 24 Jul 2014 16:11:22 +0200
+
+netcdf (1:4.1.3-7) unstable; urgency=low
+
+  * Team upload
+  * Standards-Version updated to 3.9.4
+  * Rebuild for the new upstream release of gfortran (that it just a pain)...
+    (Closes: #724660)
+  * Fix warning description-synopsis-starts-with-article
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 09 Oct 2013 14:36:16 +0200
+
+netcdf (1:4.1.3-6) unstable; urgency=low
+
+  * Fixed version for conflicting/breaking against libnetcdfc++5.
+    (closes: #662749)
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Tue, 06 Mar 2012 15:46:18 +0100
+
+netcdf (1:4.1.3-5) unstable; urgency=low
+
+  * Added a Replaces against past libnetcdf6/4 all-in-one package.
+  * The C++ binding is versioned as 4, not 5.
+  * Added a temporary breaks/replaces against libnetcdfc++5 to allow
+    a smooth upgrade in unstable.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 05 Mar 2012 11:18:37 +0100
+
+netcdf (1:4.1.3-4) unstable; urgency=low
+
+  * Re-disabling DAP remote tests to avoid failures on some build boxes.
+  * Added a specific homepage for libcf.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Sun, 04 Mar 2012 11:32:19 +0100
+
+netcdf (1:4.1.3-3) unstable; urgency=low
+
+  * Drop the non-sense package libnetcdf6. Repeat after me: always think twice
+    before releasing two versions in a row.
+    (closes: #661717)
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Wed, 29 Feb 2012 21:26:38 +0100
+
+netcdf (1:4.1.3-2) unstable; urgency=low
+
+  * Always copy symlinks instead of dereferencing, in debian/rules.
+  * This version also breaks oldstable libnetcdf4, if still around.
+    (closes: #661553)
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 27 Feb 2012 23:39:59 +0100
+
+netcdf (1:4.1.3-1) unstable; urgency=low
+
+  * Promoted to unstable.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Sun, 26 Feb 2012 23:08:01 +0100
+
+netcdf (1:4.1.3-1~exp3) experimental; urgency=low
+
+  * Removed duplicaed libraries in linetcdfc7.
+    (closes: #660318)
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Sun, 19 Feb 2012 12:58:43 +0100
+
+netcdf (1:4.1.3-1~exp2) experimental; urgency=low
+
+  * Merged changes from sid 4.1.1 branch to allow a smooth upgrade from
+    previous version (closes: #656103):
+
+      o Splitted C/C++/Fortran bindings for a better and sane migration path
+        towards 4.1.3 and beyond. Also the CF library now lives in its own
+        binary package. Note that all libraries now provide their own
+        SONAMEs and API versionings.
+      o The libnetcdf6 package is now a dummy removable onei used only
+        for migration.
+      o Removed duplicated pkgconfig file under /usr/lib.
+      o Added missing libcf0 to netcdf-dbg package in debian/control.
+
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Fri, 17 Feb 2012 13:25:36 +0100
+
+netcdf (1:4.1.3-1~exp1) experimental; urgency=low
+
+  * New upstream release.
+  * Moved to source format 3.0 with direct quilt support.
+  * Dropped all current patches (obsolete or applied upstream).
+  * Added build-dep on CUnit for unit tests.
+  * Moved to new SONAMEs and added new libcf and libcf-dev packages
+    to split up the libCF embedded library. It necessarily introduces
+    a break at this stage against 4.1.1 version. It is unfortunate but
+    necessary, because API/ABI does not necessarily change in sync at
+    every release of NetCDF, as in this case.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Wed, 30 Nov 2011 12:42:22 +0100
+
+netcdf (1:4.1.1-6) unstable; urgency=low
+
+  * Moved repository to git.
+  * Changed debian/control RCS urls.
+  * Bumped policy to 3.9.2, without changes.
+  * Now set minimal debhelper level to 8.
+  * Source format maintained to 1.0 with source/format support. Quilt support
+    is still done at debian/rules level with tarball packaging style.
+  * Added patch `noshutdown' to avoid closing HDF5 library. Thanks Enrico and
+    others.
+    (closes: #644134)
+  * The rebuild causes regeneration of .mod files with current default Fortran
+    compiler. This is only a side effect, but someone should allow managing that in
+    a proper way instead :-/
+    (closes: #618967, #643894, #642957, #630564)
+  * Fixed build error with a simple new patch `dumplib'. Thanks Enrico.
+    (closes: #643445)
+  * Changed long description for netcdf documentation.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Tue, 25 Oct 2011 13:33:23 +0200
+
+netcdf (1:4.1.1-5) unstable; urgency=low
+
+  * Uploaded to unstable.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 19 Apr 2010 16:39:38 +0200
+
+netcdf (1:4.1.1-4) experimental; urgency=low
+
+  * Now it does not run check at building time: for unknown reasons it fails
+    for some tests under buildd.
+    (closes: #577715)
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 19 Apr 2010 15:08:52 +0200
+
+netcdf (1:4.1.1-3) experimental; urgency=low
+
+  * Added la_libadd_fix patch to re-add la_libadd entry for HDF5 libraries into
+    libsrc4/Makefile.am. Patch is the results of autotools after that.
+  * Removed previous trick.
+  * Added texlive-base and texlive-latex-base as build-dep, which are required
+    for a workig texi2dvi.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Wed, 14 Apr 2010 15:54:02 +0200
+
+netcdf (1:4.1.1-2) experimental; urgency=low
+
+  * Added an explicit linking to HDF5 and libz to avoid undefs at linking time.
+    This is a problem in final 4.1.1 that needs a better solution.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 12 Apr 2010 12:49:44 +0200
+
+netcdf (1:4.1.1-1) experimental; urgency=low
+
+  * New upstream release with various building fix merged. Thanks Ed
+    and other UCAR folks.
+  * Merged cfortran changes, so dropped cfortran patch.
+  * Now OpenDAP support has been enabled: added required buil-deps on both.
+        libdap-dev
+        libcurl4-gnutls-dev
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Fri, 09 Apr 2010 11:25:38 +0200
+
+netcdf (1:4.1.1~rc2-1) experimental; urgency=low
+
+  * New upstream pre-release with working checks.
+  * Added a test patch to fix a linking problem with some test programs
+    used at check time.
+  * The netcdf-cxx4.info no more provided.
+  * Now do not dereference symlinks when cp-ing.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Tue, 23 Mar 2010 13:47:27 +0100
+
+netcdf (1:4.1~beta2-1) experimental; urgency=low
+
+  [ Francesco Paolo Lovergine ]
+  * New upstream beta release.
+  * Policy bumped to 3.8.4, without changes.
+  * Updated install hook for netcdf-doc to cp all types of documents from man4,
+    which are currently no more installed.
+  `
+  [ Alastair McKinstry ]
+  * Enable --with-libcf to generate libcf.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Wed, 03 Feb 2010 14:54:37 +0100
+
+netcdf (1:4.0.1-2) experimental; urgency=low
+
+  * Fixed netcdf.pc to remove -L/usr in NC_LIBS. This is due to an error in
+    upstream configure.ac.
+  * Fixed netcdf.pc to remove a missing unuseful autoconf var introduced
+    in netcdf.pc.in.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Sun, 27 Sep 2009 11:06:04 +0200
+
+netcdf (1:4.0.1-1) experimental; urgency=low
+
+  * New upstream release. This is a major update which adds new API support
+    and depends on HDF5.
+  * Added quilt support for patches.
+  * Patch introduced:
+  	cfortran: update to cfortran.h 4.4 and fix for a proper gfortran 4.3 support.
+  * Introduced a README.source.
+  * Removed autotools depedencies because they are no more called at build-time.
+  * Upstream tarball is now maintained as a separate embedded file for easy cleanups.
+  * Rules file revised.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 21 Sep 2009 22:35:11 +0200
+
+netcdf (1:3.6.3-1) unstable; urgency=low
+
+  * New maintainer set to DebianGis team list. Thanks Warren.
+  * New upstream release. Minor fixes before release 4.
+  * Added me as uploader.
+  * Policy bumped to 3.8.3.
+  * Debhelper level set to 7.
+  * Removed netcdfg-dev transitional package, after Lenny release.
+  * Removed libc-dev | libc6-dev historical superfluous dependency.
+  * Removed both patches merged upstream.
+  * HTML documentation is now merged in single files.
+  * Added Homepage and Vcs-* fields.
+  * Now netcdf-dbg moved to debug section.
+  * Now depends on dpkg (>= 1.15.4) | install-info
+  * Removed old Replaces/Conflicts on obsolete (pre-Lenny) netcdf packages.
+  * Moved netcdf-doc to Suggests instead of Recommends for libnetcdf-dev.
+  * Fixed debhelper-but-no-misc-depends lintian warn for netcdf-dbg
+    and netcdf-doc.
+  * Removed gfortran among Suggests for libnetcdf-dev.
+  * Fixed debian/watch file to show the most recent non-beta version.
+
+ -- Francesco Paolo Lovergine <frankie@debian.org>  Mon, 21 Sep 2009 21:37:50 +0200
+
+netcdf (1:3.6.2-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS due to libtool issues by relibtoolizing at build time
+    (Closes: #527523):
+     - Run “autoreconf -vfi” before running configure.
+     - Add autoconf to Build-Depends (just to make sure, it should be
+       pulled by automake anyway).
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 03 Sep 2009 03:13:33 +0200
+
+netcdf (1:3.6.2-3.1) unstable; urgency=low
+
+  * NMU from the Cambridge BSP
+  * Patch to allow building with G++ version 4.3 (closes: #455285)
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 06 Apr 2008 00:00:50 +0100
+
+netcdf (1:3.6.2-3) unstable; urgency=low
+
+  * add quilt for handling patches to submit upstream
+  * add patch for arm architecture support (also submitted upstream)
+
+ -- Warren Turkal <wt@penguintechs.org>  Wed, 27 Feb 2008 21:17:02 -0800
+
+netcdf (1:3.6.2-2) unstable; urgency=low
+
+  * Uploaded to unstable instead of experimental
+  * Rebuilt with gfortran 4.3
+  * Fixed watch file to not consider beta versions
+
+ -- Warren Turkal <wt@penguintechs.org>  Wed, 30 Jan 2008 00:47:40 -0800
+
+netcdf (1:3.6.2-1) experimental; urgency=low
+
+  * New maintainer: Warren Turkal (closes: #321336)
+  * New upstream release
+  * Repackaged upstream source (see README.Debian-source)
+  * Completely repackaged with cdbs (closes: #405884).
+  * Enabled Fortran 90 support by compiling with Gfortran.
+    (closes: #219592,#278739)
+  * Combined all libs into one package.
+  * added package for debug symbols (netcdf-dbg)
+  * Upstream version fixes inconsistent manpage (closes: #353332)
+  * Touched up descriptions on some of the packages
+  * added watch file for uscan
+  * added gfortran to Suggests for libnetcdf-dev
+  * updated control file replaces and conflicts for smoother upgrades
+  * documentation now shipped with library tarball (closes: #321337)
+  * added 1: epoch due to old netcdf-doc package having epoch 1:
+
+ -- Warren Turkal <wt@penguintechs.org>  Thu,  5 Apr 2007 17:42:18 -0600
+
+netcdf (3.6.1-1) unstable; urgency=medium
+
+  * QA upload.
+  * Remove stale /usr/doc symlinks if they still exist from a previous
+    package version that didn't clean it up correctly (Closes: #378647).
+
+ -- Thijs Kinkhorst <thijs@debian.org>  Fri,  5 Jan 2007 16:32:16 +0100
+
+netcdf (3.6.1-0.2) unstable; urgency=low
+
+  * QA upload.
+  * Update config.guess and config.sub.
+  * Fix the build on GNU/kFreeBSD, thanks to Petr Salinger (closes:
+    #403372).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sun, 24 Dec 2006 10:40:21 +0100
+
+netcdf (3.6.1-0.1) unstable; urgency=low
+
+  [ Matthias Klose ]
+  * Final 3.6.1 release. Closes: #243744.
+  * Adjust package description of netcdf-bin. Closes: #193398.
+  * Orphan the package. See #321336, add me as an uploader.
+
+ -- Matthias Klose <doko@debian.org>  Sat,  1 Jul 2006 22:38:43 +0000
+
+netcdf (3.6.0+3.6.1-beta3-0.1) unstable; urgency=low
+
+  * New upstream version.
+    - link errors with recent g++ version fixed (closes: #187205).
+  * Compiled with large (>2GB) file support (closes: #276420).
+  * Don't create symlinks in /usr/doc (closes: #322837).
+  * Build shared libraries with -fPIC.
+  * Build shared C++ library using g++ -shared, link against libnetcdf.
+  * C++ ABI transition:
+    - Rename netcdfg3 to libnetcdf3
+    - Split out C++ library into it's own package libnetcdf++3 (closes: #346312).
+  * Clean up some lintian warnings.
+  * debian/rules: Fix typos in macros.
+
+  * DISABLED:
+    * Add f90 interfaces.
+    * Build-depend on gfortran, drop build dependency on f77-compiler.
+  * Build-conflict on gfortran-*.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 17 Jan 2006 22:57:21 +0100
+
+netcdf (3.5.1-1) unstable; urgency=low
+
+  * New upstream release (Bug #243744)
+  * Added fortran interfaces (Bug #219592)
+  * Made shared library builds respect 'nostrip'
+  * Expanded the documentation (Bug #210000, #209947, #193398)
+  * Relaxed -dev dependancy on libc (#179813)
+
+ -- David Forrest <drf5n@freeshell.org>  Fri, 13 Aug 2004 01:03:11 -0400
+
+netcdf (3.5.0-7.1) unstable; urgency=low
+
+  * NMU to fix a RC bug
+    + Applied patch from the BTS to fix FTBFS with g++-3.3 (Closes: #195160).
+
+ -- Sebastien Bacher <seb128@debian.org>  Fri,  8 Aug 2003 12:58:47 +0200
+
+netcdf (3.5.0-7) unstable; urgency=medium
+
+  * Modified postinst to ignore an existing /usr/doc/$package directory.
+
+ -- Brian Mays <brian@debian.org>  Wed, 20 Mar 2002 11:18:54 -0500
+
+netcdf (3.5.0-6) unstable; urgency=low
+
+  * Fixed symlink /usr/doc -> ../share/doc.
+  * Fixed reference to GPL.
+  * Improved stripping of binaries.
+
+ -- Brian Mays <brian@debian.org>  Sat,  2 Feb 2002 18:48:36 -0500
+
+netcdf (3.5.0-5) unstable; urgency=low
+
+  * Netcdfg3 now suggests netcdf-doc.  (Closes: Bug#108153)
+  * Fixed more bugs for gcc 3.0.  (Closes: Bug#104912)
+
+ -- Brian Mays <brian@debian.org>  Tue, 14 Aug 2001 17:54:35 -0400
+
+netcdf (3.5.0-4) unstable; urgency=low
+
+  * Fixed configure script for gcc 3.0.  (Closes: Bug#104912)
+
+ -- Brian Mays <brian@debian.org>  Fri, 27 Jul 2001 15:28:58 -0400
+
+netcdf (3.5.0-3) unstable; urgency=low
+
+  * Eliminated obsolete libc5 packages.  (Closes: Bug#97067)
+  * Removed "-g" gcc option as per policy.
+
+ -- Brian Mays <brian@debian.org>  Mon, 16 Jul 2001 19:56:15 -0400
+
+netcdf (3.5.0-2) unstable; urgency=low
+
+  * Fixed rules file to skip building the libc5 packages on m68k.
+    (Closes: Bug#92868)
+  * Fixed package sections in control file.
+
+ -- Brian Mays <brian@debian.org>  Wed,  4 Apr 2001 07:06:36 -0400
+
+netcdf (3.5.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Brian Mays <brian@debian.org>  Fri, 30 Mar 2001 12:01:37 -0500
+
+netcdf (3.4-11) unstable; urgency=low
+
+  * Removed m68k libc5 packages.  (Closes: Bug#90636)
+
+ -- Brian Mays <brian@debian.org>  Sun, 25 Mar 2001 09:32:45 -0500
+
+netcdf (3.4-10) unstable; urgency=low
+
+  * Fixed Build-Dependencies. (Closes Bug#69852)
+
+ -- Brian Mays <brian@debian.org>  Thu, 24 Aug 2000 08:36:27 -0400
+
+netcdf (3.4-9) unstable; urgency=low
+
+  * Added Build-Dependencies.
+  * Modified source to ensure that libc5 packages are not build on
+    architectures that do not support libc5.  (Closes: Bug#69722)
+
+ -- Brian Mays <brian@debian.org>  Tue, 22 Aug 2000 14:23:12 -0400
+
+netcdf (3.4-8) unstable; urgency=low
+
+  * Modified the rules file so that libc5 stuff doesn't build on mips
+    machines.  (Closes: Bug#61329)
+
+ -- Brian Mays <brian@debian.org>  Thu, 30 Mar 2000 14:38:56 -0500
+
+netcdf (3.4-7) frozen unstable; urgency=low
+
+  * Modified the rules file so that libc5 stuff doesn't build on arm
+    machines.  (Closes: Bug#59095)
+
+ -- Brian Mays <brian@debian.org>  Thu,  2 Mar 2000 14:34:44 -0500
+
+netcdf (3.4-6) unstable; urgency=low
+
+  * Fixed FHS /usr/doc -> /usr/share/doc transition scheme.
+
+ -- Brian Mays <brian@debian.org>  Fri,  1 Oct 1999 13:37:51 -0400
+
+netcdf (3.4-5) unstable; urgency=low
+
+  * Moved the man and doc directories to under /usr/share as per the FHS.
+
+ -- Brian Mays <brian@debian.org>  Thu, 16 Sep 1999 18:04:49 -0400
+
+netcdf (3.4-4) frozen unstable; urgency=low
+
+  * Added a patch to get sources to compile on a powerpc (provided by
+    Konstantinos Margaritis <kmargar@cc.uoa.gr>).
+
+ -- Brian Mays <brian@debian.org>  Fri,  4 Dec 1998 11:43:49 -0500
+
+netcdf (3.4-3) unstable; urgency=low
+
+  * Fixed broken clean rule in debian/rules caused by changes in the
+    upstream source.  (Fixes: Bug#28166)
+
+ -- Brian Mays <brian@debian.org>  Wed, 21 Oct 1998 06:58:21 -0400
+
+netcdf (3.4-2) unstable; urgency=low
+
+  * Removed support for the now obsolete libc5 g77 compiler in
+    netcdf3-altdev.  (Fixes: Bug#26869)
+
+ -- Brian Mays <brian@debian.org>  Tue, 22 Sep 1998 06:11:36 -0400
+
+netcdf (3.4-1) unstable; urgency=low
+
+  * New upstream version.  (Fixes: Bug#22954)
+  * Linked ncdump and ncgen dynamically to libnetcdf.
+
+ -- Brian Mays <brian@debian.org>  Thu, 28 May 1998 17:18:03 -0400
+
+netcdf (3.3.1-4) unstable; urgency=low
+
+  * Compressed the man pages.
+  * Fixed the altdev symbolic links (now relative instead of absolute).
+  * Fixed file permissions.
+  * Added shlibs to the netcdf3 package.
+
+ -- Brian Mays <brian@debian.org>  Mon,  9 Feb 1998 22:02:17 -0500
+
+netcdf (3.3.1-3) unstable; urgency=low
+
+  * Added shlibs file.
+
+ -- Brian Mays <brian@debian.org>  Wed, 22 Oct 1997 10:46:01 -0400
+
+netcdf (3.3.1-2) unstable; urgency=low
+
+  * Added '-lc' linker option.
+
+ -- Brian Mays <brian@debian.org>  Mon, 20 Oct 1997 22:12:02 -0400
+
+netcdf (3.3.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * New maintainer.
+
+ -- Brian Mays <brian@debian.org>  Thu, 11 Sep 1997 13:42:03 -0400
+
+netcdf (3.3-1) unstable; urgency=low
+
+  * New upstream release, built with libc6
+  * netcdf-doc doesn't depend on netcdf.
+
+ -- Karl Sackett <krs@debian.org>  Thu, 12 Jun 1997 10:27:20 -0500
+
+netcdf (2.4.3-5) unstable; urgency=low
+
+  * Added soname to netcdf.
+  * Libraries compiled with -D_REENTRANT.
+  * Moved ncdump and ncgen from netcdf-dev to netcdf-bin.
+
+ -- Karl Sackett <krs@debian.org>  Fri, 21 Mar 1997 09:26:16 -0600
+
+netcdf (2.4.3-4) unstable; urgency=low
+
+  * debian/rules: fixed permissions and stripped shared libraries.
+  * Changed maintainer address
+
+ -- Karl Sackett <krs@debian.org>  Tue, 15 Oct 1996 10:31:01 -0500
+
+netcdf (2.4.3-3) unstable; urgency=low
+
+  * Fixed problems with debian/shlibs.local.
+  * debian/control: netcdf-dev depends on libc5-dev, netcdf-doc on netcdf.
+
+ -- Karl Sackett <krs@caos.aamu.edu>  Tue, 1 Oct 1996 13:33:47 -0500
+
+netcdf (2.4.3-2) unstable; urgency=low
+
+  * debian/rules: removed '-m486' from compile options, binary-arch and
+    binary-indep targets build correct packages (bug #4625).
+  * debian/rules: added OS parameter to build target (required to create
+    src/fortran/netcdf.inc) (bug #4625).
+
+ -- Karl Sackett <krs@caos.aamu.edu>  Mon, 30 Sep 1996 09:24:46 -0500
+
+netcdf (2.4.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Converted package to new standards.
+  * Split package into runtime, development, and documentation.
+
+ -- Karl Sackett <krs@caos.aamu.edu>  Fri, 27 Sep 1996 08:13:57 -0500
+
+2.4.2-2:
+	* Support files now architecture-independent
+
+2.4.2-1:
+	* Upgrade to latest release
+	* Brought support files up to latest packaging requirements
+
+2.4-1:
+        * Added Debian support files
+	* fortran/linux.m4 - created
+	* ncgen/Makefile.in - corrections to ncgentab.h target
+	* Makefile.in - added OS=linux
