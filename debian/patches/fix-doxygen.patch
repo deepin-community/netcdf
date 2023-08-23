@@ -1,0 +1,32 @@
+Description: Fix build on doc
+ Doxygen is currently complaining doc errors, fixing them.
+Author: Tianyu Chen <sweetyfish@deepin.org>
+Origin: upstream
+Forwarded: no
+Applied-Upstream: https://github.com/Unidata/netcdf-c/commit/591e6b2f6df3adc294238255428bae7f7980e45f
+Last-Update: 2023-08-23
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/docs/dispatch.md
++++ b/docs/dispatch.md
+@@ -389,6 +389,11 @@
+ Code in libhdf4 is only compiled if HDF4 is
+ turned on in the build.
+ 
++## Header File Changes
++
++Adding the HDF4 dispatch table will first require changes to
++a number of header files.
++
+ ### The netcdf.h File
+ 
+ In the main netcdf.h file, we have the following:
+@@ -515,7 +520,7 @@
+ 
+ The two should agree in value.
+ 
+-### NC_DISPATCH_VERSION Incompatibility
++## NC_DISPATCH_VERSION Incompatibility
+ 
+ When dynamically adding a dispatch table
+ -- in nc_def_user_format (see libdispatch/dfile.c) --
