@@ -3,3 +3,4 @@ hdf5-library-path.patch
 tst_fileinfo-link-hdf5.patch
 reproducible-settings.patch
 byteswap.patch
+fix-doxygen.patch

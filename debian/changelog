@@ -1,3 +1,9 @@
+netcdf (1:4.9.2-1deepin) unstable; urgency=medium
+
+  * d/patches/fix-doxygen.patch: Fix doxygen error.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Wed, 23 Aug 2023 17:43:04 +0800
+
 netcdf (1:4.9.2-1) unstable; urgency=medium
 
   * Bump debhelper compat to 13.
