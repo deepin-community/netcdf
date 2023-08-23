@@ -5,18 +5,20 @@ Uploaders: Francesco Paolo Lovergine <frankie@debian.org>,
            Bas Couwenberg <sebastic@debian.org>
 Section: science
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                cmake (>= 3.6.1),
                chrpath,
                m4,
                doxygen,
                graphviz,
-               libhdf5-dev (>= 1.8.6-1~),
-               libcurl4-gnutls-dev | libcurl-ssl-dev
-Standards-Version: 4.6.0
+               libcurl4-gnutls-dev | libcurl-ssl-dev,
+               libhdf5-dev,
+               libxml2-dev
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/debian-gis-team/netcdf
 Vcs-Git: https://salsa.debian.org/debian-gis-team/netcdf.git
 Homepage: http://www.unidata.ucar.edu/software/netcdf/
+Rules-Requires-Root: no
 
 Package: netcdf-doc
 Architecture: all
@@ -60,8 +62,9 @@ Package: libnetcdf-dev
 Architecture: any
 Section: libdevel
 Depends: libnetcdf19 (= ${binary:Version}),
-         libhdf5-dev (>= 1.8.6-1~),
          libcurl4-gnutls-dev | libcurl-ssl-dev,
+         libhdf5-dev,
+         libxml2-dev,
          ${misc:Depends}
 Recommends: pkg-config
 Breaks: netcdf-bin (<< 1:4.3.3.1)

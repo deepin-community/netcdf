@@ -7,7 +7,7 @@ Forwarded: not-needed
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -2067,6 +2067,17 @@ SET(libdir ${CMAKE_INSTALL_PREFIX}/${CMA
+@@ -2442,6 +2442,17 @@ SET(libdir ${CMAKE_INSTALL_PREFIX}/${CMA
  SET(includedir ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR})
  SET(CC ${CMAKE_C_COMPILER})
  
@@ -27,8 +27,8 @@ Forwarded: not-needed
  
 --- a/nc-config.cmake.in
 +++ b/nc-config.cmake.in
-@@ -10,8 +10,8 @@ libdir="@CMAKE_INSTALL_PREFIX@/@CMAKE_IN
- includedir="@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@"
+@@ -11,8 +11,8 @@ includedir="@CMAKE_INSTALL_PREFIX@/@CMAK
+ plugindir="@PLUGIN_INSTALL_DIR@"
  
  cc="@CMAKE_C_COMPILER@"
 -cflags="-I@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@"
@@ -41,7 +41,7 @@ Forwarded: not-needed
 --- a/netcdf.pc.in
 +++ b/netcdf.pc.in
 @@ -9,5 +9,5 @@ Description: NetCDF Client Library for C
- URL: http://www.unidata.ucar.edu/netcdf
+ URL: https://www.unidata.ucar.edu/netcdf
  Version: @PACKAGE_VERSION@
  Libs: -L${libdir} @NC_LIBS@
 -Libs.private: @LIBS@

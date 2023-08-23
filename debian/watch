@@ -3,5 +3,5 @@ opts=\
 dversionmangle=s/\+(debian|dfsg|ds|deb)\d*$//,\
 uversionmangle=s/_/./g;s/(\d)[_\.\-\+]?((RC|rc|pre|dev|gamma|beta|alpha|b|a)[\-\.]?(\d*))$/$1~$3$4/;s/RC/rc/,\
 filenamemangle=s/(?:.*?\/)?(?:rel|v|r|netcdf-c)?[\-\_]?(\d[\d\-\.\w]+)\.(tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))/netcdf-c-$1.$2/ \
-https://github.com/Unidata/netcdf-c/releases \
-(?:.*?/archive/(?:.*?/)?)?(?:rel|v|r|netcdf-c)?[\-\_]?(\d[\d\-\.\w]+)\.(?:tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+https://github.com/Unidata/netcdf-c/tags \
+(?:.*?/archive/(?:.*?/)?)?(?:rel|v|r|netcdf-c)?[\-\_]?(\d[\d\-\.\w]+(?<!test))\.(?:tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

@@ -2,3 +2,6 @@
 acute-accent-in-manual-page *
 groff-message *
 
+# False positive, lat/lon
+typo-in-manual-page lon long *
+

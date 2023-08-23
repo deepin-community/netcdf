@@ -10839,7 +10839,7 @@ test_nc_get_att_text(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    if (ATT_TYPE(i,j) != NC_CHAR)
 		    
@@ -10962,7 +10962,7 @@ test_nc_get_att_uchar(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    if (cdf_format > NC_FORMAT_64BIT_OFFSET || (cdf_format < NC_FORMAT_CDF5 && ATT_TYPE(i,j) != NC_BYTE))
@@ -11092,7 +11092,7 @@ test_nc_get_att_schar(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11215,7 +11215,7 @@ test_nc_get_att_short(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11338,7 +11338,7 @@ test_nc_get_att_int(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11461,7 +11461,7 @@ test_nc_get_att_long(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11584,7 +11584,7 @@ test_nc_get_att_float(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11707,7 +11707,7 @@ test_nc_get_att_double(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11830,7 +11830,7 @@ test_nc_get_att_ushort(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -11953,7 +11953,7 @@ test_nc_get_att_uint(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -12076,7 +12076,7 @@ test_nc_get_att_longlong(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    
@@ -12199,7 +12199,7 @@ test_nc_get_att_ulonglong(void)
 		    /* netCDF specification make a special case for type
 		     * conversion between uchar and scahr: do not check for
 		     * range error. See
-		     * http://www.unidata.ucar.edu/software/netcdf/docs/data_type.html#type_conversion
+		     * https://docs.unidata.ucar.edu/netcdf-c/current/data_type.html#type_conversion
                      */
 		    
 		    

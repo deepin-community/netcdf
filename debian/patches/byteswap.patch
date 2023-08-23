@@ -4,8 +4,8 @@ Bug: https://github.com/Unidata/netcdf-c/issues/1687
 
 --- a/libdispatch/dfilter.c
 +++ b/libdispatch/dfilter.c
-@@ -20,6 +20,9 @@
- #include "hdf5internal.h"
+@@ -28,6 +28,9 @@
+ #include "zdispatch.h"
  #endif
  
 +static void byteswap8(unsigned char*);
