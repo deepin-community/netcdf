@@ -1,3 +1,78 @@
+netcdf (1:4.9.2-1) unstable; urgency=medium
+
+  * Bump debhelper compat to 13.
+  * Move from experimental to unstable.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 13 Jun 2023 17:05:29 +0200
+
+netcdf (1:4.9.2-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Wed, 15 Mar 2023 05:32:36 +0100
+
+netcdf (1:4.9.1-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Add Rules-Requires-Root to control file.
+  * Bump Standards-Version to 4.6.2, no changes.
+  * Refresh patches.
+  * Update symbols for 4.9.1.
+  * Strip pre-releases from symbols version.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 06 Feb 2023 15:10:15 +0100
+
+netcdf (1:4.9.1~rc2-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Ignore tags with 'test' suffix.
+  * Drop spelling-errors.patch, applied upstream. Refresh remaining patches.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 22 Nov 2022 05:33:45 +0100
+
+netcdf (1:4.9.1~rc1-1~exp1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Drop library-version.patch, applied upstream.
+  * Update symbols for 4.9.1~rc1.
+  * Update lintian overrides.
+  * Add patch to fix spelling errors.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 22 Oct 2022 07:03:57 +0200
+
+netcdf (1:4.9.0-3) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.1, no changes.
+  * Update lintian overrides.
+  * Don't enable plugins.
+  * Drop compression library dependencies, only used for plugins.
+  * Drop obsolete dh_strip override, dbgsym migration complete.
+  * Update lintian overrides.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 30 Jul 2022 06:26:24 +0200
+
+netcdf (1:4.9.0-2) unstable; urgency=medium
+
+  * Update libnetcdf-dev dependencies for compression libraries.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 12 Jun 2022 08:04:12 +0200
+
+netcdf (1:4.9.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    (closes: #989360)
+  * Update copyright file.
+  * Add build dependencies for compression libraries.
+  * Refresh patches.
+  * Drop link-private.patch, causes FTBFS.
+  * Use libxml2 instead of tinyxml2 embedded copy.
+  * Update symbols for 4.9.0.
+  * Add patch to fix library version and filename.
+  * Update lintian overrides.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 11 Jun 2022 08:35:40 +0200
+
 netcdf (1:4.8.1-1) unstable; urgency=medium
 
   * Bump Standards-Version to 4.6.0, no changes.

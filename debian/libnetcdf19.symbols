@@ -3,6 +3,8 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  Cde2h@Base 4.3.3
  Cdh2e@Base 4.3.3
  DAPparse@Base 4.1.3
+ H5FD_http_init@Base 4.9.1
+ H5Pset_fapl_http@Base 4.9.1
  HDF5_def_dim@Base 4.8.0
  HDF5_dispatch_table@Base 4.6.2.1
  HDF5_inq_dim@Base 4.8.0
@@ -68,6 +70,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC4_def_var_endian@Base 4.1.3
  NC4_def_var_fill@Base 4.1.3
  NC4_def_var_fletcher32@Base 4.1.3
+ NC4_def_var_quantize@Base 4.9.0
  NC4_def_vlen@Base 4.1.3
  NC4_extract_file_image@Base 4.6.2
  NC4_finalize@Base 4.4.0
@@ -78,10 +81,13 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC4_get_vlen_element@Base 4.1.3
  NC4_hdf5_addfilter@Base 4.7.4
  NC4_hdf5_def_var_filter@Base 4.8.0
+ NC4_hdf5_filter_finalize@Base 4.9.0
  NC4_hdf5_filter_freelist@Base 4.8.0
+ NC4_hdf5_filter_initialize@Base 4.9.0
  NC4_hdf5_filter_lookup@Base 4.8.0
  NC4_hdf5_filter_remove@Base 4.8.0
  NC4_hdf5_find_missing_filter@Base 4.8.1
+ NC4_hdf5_inq_filter_avail@Base 4.9.0
  NC4_hdf5_inq_var_filter_ids@Base 4.8.0
  NC4_hdf5_inq_var_filter_info@Base 4.8.0
  NC4_hdf5get_libversion@Base 4.4.1
@@ -110,12 +116,14 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC4_inq_ncid@Base 4.1.3
  NC4_inq_type@Base 4.1.3
  NC4_inq_type_equal@Base 4.1.3
+ NC4_inq_type_fixed_size@Base 4.9.0
  NC4_inq_typeid@Base 4.1.3
  NC4_inq_typeids@Base 4.1.3
  NC4_inq_unlimdim@Base 4.1.3
  NC4_inq_unlimdims@Base 4.1.3
  NC4_inq_user_type@Base 4.1.3
  NC4_inq_var_all@Base 4.1.3
+ NC4_inq_var_quantize@Base 4.9.0
  NC4_inq_varid@Base 4.1.3
  NC4_inq_varids@Base 4.1.3
  NC4_insert_array_compound@Base 4.1.3
@@ -239,6 +247,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCD4_findvar@Base 4.8.0
  NCD4_getToplevelVars@Base 4.5.0
  NCD4_get_rcproperties@Base 4.6.2
+ NCD4_get_substrate@Base 4.9.0
  NCD4_get_vara@Base 4.5.0
  NCD4_get_vars@Base 4.5.0
  NCD4_getcounter@Base 4.8.0
@@ -253,7 +262,6 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCD4_makeFQN@Base 4.5.0
  NCD4_makeName@Base 4.5.0
  NCD4_metabuild@Base 4.5.0
- NCD4_mktmp@Base 4.6.2
  NCD4_moveto@Base 4.5.0
  NCD4_newmeta@Base 4.5.0
  NCD4_open@Base 4.5.0
@@ -266,7 +274,6 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCD4_processdata@Base 4.5.0
  NCD4_readDAP@Base 4.5.0
  NCD4_readDMR@Base 4.5.0
- NCD4_readfile@Base 4.6.2
  NCD4_reclaimMeta@Base 4.5.0
  NCD4_reportcurlerror@Base 4.5.0
  NCD4_reporterror@Base 4.8.1
@@ -303,16 +310,20 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCJnewstring@Base 4.8.0
  NCJnewstringn@Base 4.8.0
  NCJparse@Base 4.8.0
+ NCJparsen@Base 4.9.0
  NCJreclaim@Base 4.8.0
+ NCJtotext@Base 4.9.1
  NCJunparse@Base 4.8.0
  NCZ__enddef@Base 4.8.0
  NCZ_abort@Base 4.8.0
  NCZ_addfilter@Base 4.8.0
  NCZ_adjust_var_cache@Base 4.8.0
+ NCZ_applyfilterchain@Base 4.9.0
  NCZ_buildchunkkey@Base 4.8.0
  NCZ_buildchunkpath@Base 4.8.0
  NCZ_cache_entrysize@Base 4.8.0
  NCZ_cache_size@Base 4.8.0
+ NCZ_char2fixed@Base 4.9.1
  NCZ_chunkindexodom@Base 4.8.0
  NCZ_chunkpath@Base 4.8.1
  NCZ_clear_provenance@Base 4.8.0
@@ -320,6 +331,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCZ_clearsliceprojections@Base 4.8.0
  NCZ_clonestringvec@Base 4.8.0
  NCZ_close@Base 4.8.0
+ NCZ_codec_attr@Base 4.9.0
  NCZ_comma_parse@Base 4.8.0
  NCZ_compute_all_slice_projections@Base 4.8.0
  NCZ_compute_chunk_ranges@Base 4.8.0
@@ -327,9 +339,10 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCZ_compute_projections@Base 4.8.0
  NCZ_computelinearoffset@Base 4.8.0
  NCZ_convert1@Base 4.8.0
+ NCZ_copy_data@Base 4.9.1
+ NCZ_copy_fill_value@Base 4.9.0
  NCZ_create@Base 4.8.0
  NCZ_create_chunk_cache@Base 4.8.0
- NCZ_create_fill_chunk@Base 4.8.0
  NCZ_def_dim@Base 4.8.0
  NCZ_def_grp@Base 4.8.0
  NCZ_def_var@Base 4.8.0
@@ -339,26 +352,39 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCZ_def_var_fill@Base 4.8.0
  NCZ_def_var_filter@Base 4.8.0
  NCZ_def_var_fletcher32@Base 4.8.0
+ NCZ_def_var_quantize@Base 4.9.0
  NCZ_del_att@Base 4.8.0
  NCZ_dimkey@Base 4.8.0
  NCZ_dispatch_table@Base 4.8.0
  NCZ_downloadjson@Base 4.8.0
- NCZ_filter_freelist@Base 4.8.0
- NCZ_filter_lookup@Base 4.8.0
+ NCZ_dumpxcacheentry@Base 4.9.0
+ NCZ_ensure_fill_chunk@Base 4.9.0
+ NCZ_ensure_fill_value@Base 4.9.0
+ NCZ_ensure_quantizer@Base 4.9.0
+ NCZ_filter_build@Base 4.9.0
+ NCZ_filter_finalize@Base 4.9.0
+ NCZ_filter_freelists@Base 4.9.0
+ NCZ_filter_initialize@Base 4.9.0
+ NCZ_filter_jsonize@Base 4.9.0
  NCZ_filter_remove@Base 4.8.0
+ NCZ_filter_setup@Base 4.9.0
  NCZ_finalize@Base 4.8.0
  NCZ_finalize_internal@Base 4.8.0
+ NCZ_fixed2char@Base 4.9.1
  NCZ_flush_chunk_cache@Base 4.8.0
  NCZ_free_chunk_cache@Base 4.8.0
  NCZ_freeenvv@Base 4.8.0
  NCZ_freestringvec@Base 4.8.0
  NCZ_get_att@Base 4.8.0
  NCZ_get_libversion@Base 4.8.0
+ NCZ_get_maxstrlen@Base 4.9.1
  NCZ_get_superblock@Base 4.8.0
  NCZ_get_vara@Base 4.8.0
  NCZ_get_vars@Base 4.8.0
  NCZ_grpkey@Base 4.8.0
  NCZ_grpname_full@Base 4.8.0
+ NCZ_inferattrtype@Base 4.9.1
+ NCZ_inferinttype@Base 4.9.1
  NCZ_initialize@Base 4.8.0
  NCZ_initialize_internal@Base 4.8.0
  NCZ_inq@Base 4.8.0
@@ -366,19 +392,38 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCZ_inq_attid@Base 4.8.0
  NCZ_inq_attname@Base 4.8.0
  NCZ_inq_dim@Base 4.8.0
+ NCZ_inq_dimid@Base 4.9.0
+ NCZ_inq_dimids@Base 4.9.0
+ NCZ_inq_filter_avail@Base 4.9.0
+ NCZ_inq_format@Base 4.9.0
  NCZ_inq_format_extended@Base 4.8.0
+ NCZ_inq_grp_full_ncid@Base 4.9.0
+ NCZ_inq_grp_parent@Base 4.9.0
+ NCZ_inq_grpname@Base 4.9.0
+ NCZ_inq_grpname_full@Base 4.9.0
+ NCZ_inq_grps@Base 4.9.0
+ NCZ_inq_ncid@Base 4.9.0
+ NCZ_inq_type@Base 4.9.0
  NCZ_inq_type_equal@Base 4.8.0
  NCZ_inq_typeid@Base 4.8.0
  NCZ_inq_typeids@Base 4.8.0
+ NCZ_inq_unlimdim@Base 4.9.0
  NCZ_inq_unlimdims@Base 4.8.0
+ NCZ_inq_user_type@Base 4.9.0
  NCZ_inq_var_all@Base 4.8.0
  NCZ_inq_var_filter_ids@Base 4.8.0
  NCZ_inq_var_filter_info@Base 4.8.0
+ NCZ_inq_var_quantize@Base 4.9.0
+ NCZ_inq_varid@Base 4.9.0
+ NCZ_inq_varids@Base 4.9.0
  NCZ_isLittleEndian@Base 4.8.0
  NCZ_ischunkname@Base 4.8.1
+ NCZ_iscomplexjson@Base 4.9.1
  NCZ_isnetcdf4@Base 4.8.0
+ NCZ_json2cvt@Base 4.9.1
  NCZ_new_provenance@Base 4.8.0
  NCZ_open@Base 4.8.0
+ NCZ_printxcache@Base 4.9.0
  NCZ_projectslices@Base 4.8.0
  NCZ_provenance_finalize@Base 4.8.0
  NCZ_provenance_init@Base 4.8.0
@@ -390,13 +435,13 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCZ_read_provenance@Base 4.8.0
  NCZ_readarray@Base 4.8.0
  NCZ_readdict@Base 4.8.0
+ NCZ_reclaim_fill_chunk@Base 4.9.0
+ NCZ_reclaim_fill_value@Base 4.9.0
  NCZ_redef@Base 4.8.0
  NCZ_rename_att@Base 4.8.0
  NCZ_rename_dim@Base 4.8.0
  NCZ_rename_grp@Base 4.8.0
  NCZ_rename_var@Base 4.8.0
- NCZ_s3clear@Base 4.8.0
- NCZ_s3urlprocess@Base 4.8.0
  NCZ_set_fill@Base 4.8.0
  NCZ_set_var_chunk_cache@Base 4.8.0
  NCZ_stringconvert1@Base 4.8.0
@@ -409,10 +454,10 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NCZ_transferslice@Base 4.8.0
  NCZ_uploadjson@Base 4.8.0
  NCZ_varkey@Base 4.8.0
- NCZ_write_cache_chunk@Base 4.8.0
  NCZ_write_provenance@Base 4.8.0
  NC_HDF5_finalize@Base 4.6.2.1
  NC_HDF5_initialize@Base 4.6.2.1
+ NC_NOOP_inq_filter_avail@Base 4.9.0
  NC_NOOP_inq_var_filter_ids@Base 4.8.0
  NC_NOOP_inq_var_filter_info@Base 4.8.0
  NC_NOTNC3_get_varm@Base 4.7.1
@@ -426,6 +471,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC_NOTNC4_def_var_endian@Base 4.6.2
  NC_NOTNC4_def_var_filter@Base 4.6.2
  NC_NOTNC4_def_var_fletcher32@Base 4.6.2
+ NC_NOTNC4_def_var_quantize@Base 4.9.0
  NC_NOTNC4_def_vlen@Base 4.6.2
  NC_NOTNC4_get_var_chunk_cache@Base 4.6.2
  NC_NOTNC4_get_vlen_element@Base 4.6.2
@@ -445,6 +491,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC_NOTNC4_inq_user_type@Base 4.7.1
  NC_NOTNC4_inq_var_filter_ids@Base 4.8.0
  NC_NOTNC4_inq_var_filter_info@Base 4.8.0
+ NC_NOTNC4_inq_var_quantize@Base 4.9.0
  NC_NOTNC4_inq_varids@Base 4.7.1
  NC_NOTNC4_insert_array_compound@Base 4.6.2
  NC_NOTNC4_insert_compound@Base 4.6.2
@@ -471,6 +518,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC_atomictypelen@Base 4.1.3
  NC_atomictypename@Base 4.1.3
  NC_authfree@Base 4.8.0
+ NC_authgets3profile@Base 4.9.0
  NC_authsetup@Base 4.6.0
  NC_backslashEscape@Base 4.6.0
  NC_backslashUnescape@Base 4.6.0
@@ -494,7 +542,11 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC_findattr@Base 3.6.1
  NC_findreserved@Base 4.6.2
  NC_findvar@Base 3.6.1
+ NC_freeglobalstate@Base 4.9.0
  NC_get_vara@Base 4.1.3
+ NC_getactives3profile@Base 4.9.0
+ NC_getdefaults3region@Base 4.9.0
+ NC_getglobalstate@Base 4.9.0
  NC_getmodelist@Base 4.7.2
  NC_getshape@Base 4.3.3
  NC_hashmapadd@Base 4.6.1
@@ -512,6 +564,8 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC_inq_recvar@Base 4.4.0
  NC_isLittleEndian@Base 4.6.0
  NC_is_recvar@Base 4.3.3
+ NC_iss3@Base 4.9.0
+ NC_join@Base 4.9.0
  NC_lookupvar@Base 3.6.1
  NC_mktmp@Base 4.6.0
  NC_open@Base 4.1.3
@@ -521,15 +575,27 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  NC_rcfile_insert@Base 4.6.2
  NC_rcfile_ith@Base 4.7.0
  NC_rcfile_length@Base 4.7.0
- NC_rcload@Base 4.6.0
  NC_rclookup@Base 4.6.0
+ NC_rclookupx@Base 4.9.0
  NC_readfile@Base 4.6.0
+ NC_readfileF@Base 4.9.0
+ NC_readfilen@Base 4.9.0
+ NC_s3clear@Base 4.9.0
+ NC_s3profilelookup@Base 4.9.0
+ NC_s3urlprocess@Base 4.9.0
+ NC_s3urlrebuild@Base 4.9.0
  NC_shellUnescape@Base 4.8.1
+ NC_split_delim@Base 4.9.0
  NC_stride_one@Base 4.7.1
  NC_sync@Base 3.6.1
  NC_testmode@Base 4.7.2
+ NC_testpathmode@Base 4.9.0
+ NC_type_alignment@Base 4.9.0
  NC_var_shape@Base 3.6.1
  NC_writefile@Base 4.6.2
+ NCgetinputpathkind@Base 4.9.0
+ NCgetkindname@Base 4.9.0
+ NCgetlocalpathkind@Base 4.9.0
  NChasdriveletter@Base 4.8.0
  NCisnetworkpath@Base 4.8.1
  NCpath2utf8@Base 4.8.0
@@ -708,37 +774,6 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  dup_NC_vararrayV@Base 3.6.1
  elem_NC_attrarray@Base 3.6.1
  elem_NC_dimarray@Base 3.6.1
- ezxml_add_child@Base 4.5.0
- ezxml_all_attr@Base 4.5.0
- ezxml_ampencode@Base 4.5.0
- ezxml_attr@Base 4.5.0
- ezxml_char_content@Base 4.5.0
- ezxml_child@Base 4.5.0
- ezxml_close_tag@Base 4.5.0
- ezxml_cut@Base 4.5.0
- ezxml_decode@Base 4.5.0
- ezxml_ent_ok@Base 4.5.0
- ezxml_err@Base 4.5.0
- ezxml_error@Base 4.5.0
- ezxml_free@Base 4.5.0
- ezxml_free_attr@Base 4.5.0
- ezxml_get@Base 4.5.0
- ezxml_idx@Base 4.5.0
- ezxml_insert@Base 4.5.0
- ezxml_internal_dtd@Base 4.5.0
- ezxml_new@Base 4.5.0
- ezxml_open_tag@Base 4.5.0
- ezxml_parse_fp@Base 4.5.0
- ezxml_parse_str@Base 4.5.0
- ezxml_pi@Base 4.5.0
- ezxml_proc_inst@Base 4.5.0
- ezxml_set_attr@Base 4.5.0
- ezxml_set_flag@Base 4.5.0
- ezxml_set_txt@Base 4.5.0
- ezxml_str2utf8@Base 4.5.0
- ezxml_toxml@Base 4.5.0
- ezxml_toxml_r@Base 4.5.0
- ezxml_vget@Base 4.5.0
  fill_NC_var@Base 3.6.1
  find_NC_Udim@Base 3.6.1
  find_in_NCList@Base 4.1.3
@@ -764,11 +799,17 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  getalldims@Base 4.3.3
  getlimitnumber@Base 4.1.3
  hash_fast@Base 4.1.3
+ hdf5set_format_compatibility@Base 4.9.0
+ httpio_create@Base 4.9.1
+ httpio_open@Base 4.9.1
  indexer@Base 4.1.3
  indexpath@Base 4.1.3
  int_cmp@Base 4.1.3
  iscached@Base 4.1.3
  iterate_NCList@Base 4.4.1
+ loadcodecdefaults@Base 4.9.0
+ loaded_plugins@Base 4.9.0
+ loaded_plugins_max@Base 4.9.0
  makecdfnode@Base 4.3.3
  makecdfpathstring@Base 4.3.3
  makeocpathstring@Base 4.3.3
@@ -798,9 +839,6 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc4_check_chunksizes@Base 4.8.0
  nc4_check_dup_name@Base 4.0.1
  nc4_check_name@Base 4.0.1
- nc4_chunk_cache_nelems@Base 4.1.3
- nc4_chunk_cache_preemption@Base 4.1.3
- nc4_chunk_cache_size@Base 4.1.3
  nc4_close_hdf5_file@Base 4.6.2
  nc4_close_netcdf4_file@Base 4.6.2
  nc4_convert_type@Base 4.0.1
@@ -814,6 +852,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc4_file_list_add@Base 4.7.1
  nc4_file_list_del@Base 4.7.1
  nc4_file_list_get@Base 4.7.1
+ nc4_finalize_logging@Base 4.9.0
  nc4_find_default_chunksizes2@Base 4.7.4
  nc4_find_dim@Base 4.0.1
  nc4_find_dim_len@Base 4.0.1
@@ -828,6 +867,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc4_get_att@Base 4.6.2.1
  nc4_get_att_ptrs@Base 4.6.2.1
  nc4_get_att_special@Base 4.6.2.1
+ nc4_get_default_atomic_fill_value@Base 4.9.0
  nc4_get_default_fill_value@Base 4.0.1
  nc4_get_fill_value@Base 4.6.2
  nc4_get_hdf_typeid@Base 4.1.3
@@ -841,6 +881,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc4_hdf5_get_chunk_cache@Base 4.8.0
  nc4_hdf5_initialize@Base 4.4.1
  nc4_hdf5_initialized@Base 4.4.1
+ nc4_init_logging@Base 4.9.0
  nc4_nc4f_list_add@Base 4.0.1
  nc4_nc4f_list_del@Base 4.7.1
  nc4_normalize_name@Base 4.0.1
@@ -851,6 +892,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc4_rec_find_named_type@Base 4.1.3
  nc4_rec_grp_HDF5_del@Base 4.6.2
  nc4_rec_grp_del@Base 4.0.1
+ nc4_rec_grp_del_att_data@Base 4.9.0
  nc4_rec_match_dimscales@Base 4.0.1
  nc4_rec_write_groups_types@Base 4.3.3
  nc4_rec_write_metadata@Base 4.0.1
@@ -875,6 +917,8 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_close@Base 3.6.1
  nc_close_memio@Base 4.6.2
  nc_copy_att@Base 3.6.1
+ nc_copy_data@Base 4.9.0
+ nc_copy_data_all@Base 4.9.0
  nc_copy_var@Base 3.6.1
  nc_create@Base 3.6.1
  nc_create_mem@Base 4.6.2
@@ -887,6 +931,8 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_def_opaque@Base 4.0.1
  nc_def_user_format@Base 4.6.2
  nc_def_var@Base 3.6.1
+ nc_def_var_blosc@Base 4.9.0
+ nc_def_var_bzip2@Base 4.9.0
  nc_def_var_chunking@Base 4.0.1
  nc_def_var_chunking_ints@Base 4.0.1
  nc_def_var_deflate@Base 4.0.1
@@ -894,17 +940,21 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_def_var_fill@Base 4.0.1
  nc_def_var_filter@Base 4.6.0
  nc_def_var_fletcher32@Base 4.0.1
+ nc_def_var_quantize@Base 4.9.0
  nc_def_var_szip@Base 4.7.4
+ nc_def_var_zstandard@Base 4.9.0
  nc_def_vlen@Base 4.0.1
  nc_del_att@Base 3.6.1
  nc_delete@Base 3.6.1
  nc_delete_mp@Base 3.6.1
+ nc_dump_data@Base 4.9.0
  nc_enddef@Base 3.6.1
  nc_finalize@Base 4.4.0
  nc_free_string@Base 4.0.1
  nc_free_vlen@Base 4.0.1
  nc_free_vlens@Base 4.1.3
  nc_get_NC@Base 3.6.1
+ nc_get_alignment@Base 4.9.0
  nc_get_att@Base 3.6.1
  nc_get_att_double@Base 3.6.1
  nc_get_att_float@Base 3.6.1
@@ -1002,6 +1052,19 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_get_vars_ulonglong@Base 4.0.1
  nc_get_vars_ushort@Base 4.0.1
  nc_get_vlen_element@Base 4.0.1
+ nc_http_close@Base 4.9.1
+ nc_http_init@Base 4.9.1
+ nc_http_init_verbose@Base 4.9.1
+ nc_http_read@Base 4.9.1
+ nc_http_request_setheaders@Base 4.9.1
+ nc_http_reset@Base 4.9.1
+ nc_http_response_headers@Base 4.9.1
+ nc_http_response_headset@Base 4.9.1
+ nc_http_set_method@Base 4.9.1
+ nc_http_set_payload@Base 4.9.1
+ nc_http_set_response@Base 4.9.1
+ nc_http_size@Base 4.9.1
+ nc_http_write@Base 4.9.1
  nc_initialize@Base 4.4.0
  nc_inq@Base 3.6.1
  nc_inq_att@Base 3.6.1
@@ -1029,6 +1092,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_inq_enum@Base 4.0.1
  nc_inq_enum_ident@Base 4.0.1
  nc_inq_enum_member@Base 4.0.1
+ nc_inq_filter_avail@Base 4.9.0
  nc_inq_format@Base 3.6.1
  nc_inq_format_extended@Base 4.3.3
  nc_inq_grp_full_ncid@Base 4.0.1
@@ -1055,6 +1119,8 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_inq_user_format@Base 4.6.2
  nc_inq_user_type@Base 4.0.1
  nc_inq_var@Base 3.6.1
+ nc_inq_var_blosc@Base 4.9.0
+ nc_inq_var_bzip2@Base 4.9.0
  nc_inq_var_chunking@Base 4.0.1
  nc_inq_var_chunking_ints@Base 4.0.1
  nc_inq_var_deflate@Base 4.0.1
@@ -1064,7 +1130,9 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_inq_var_filter_ids@Base 4.8.0
  nc_inq_var_filter_info@Base 4.7.4
  nc_inq_var_fletcher32@Base 4.0.1
+ nc_inq_var_quantize@Base 4.9.0
  nc_inq_var_szip@Base 4.1.3
+ nc_inq_var_zstandard@Base 4.9.0
  nc_inq_vardimid@Base 3.6.1
  nc_inq_varid@Base 3.6.1
  nc_inq_varids@Base 4.0.1
@@ -1081,6 +1149,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_open_memio@Base 4.6.2
  nc_open_par@Base 4.0.1
  nc_open_par_fortran@Base 4.1.3
+ nc_print_data@Base 4.9.0
  nc_put_att@Base 3.6.1
  nc_put_att_double@Base 3.6.1
  nc_put_att_float@Base 3.6.1
@@ -1173,11 +1242,16 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nc_put_vars_ulonglong@Base 4.0.1
  nc_put_vars_ushort@Base 4.0.1
  nc_put_vlen_element@Base 4.0.1
+ nc_rc_get@Base 4.9.1
+ nc_rc_set@Base 4.9.1
+ nc_reclaim_data@Base 4.9.0
+ nc_reclaim_data_all@Base 4.9.0
  nc_redef@Base 3.6.1
  nc_rename_att@Base 3.6.1
  nc_rename_dim@Base 3.6.1
  nc_rename_grp@Base 4.3.3
  nc_rename_var@Base 3.6.1
+ nc_set_alignment@Base 4.9.0
  nc_set_base_pe@Base 3.6.1
  nc_set_chunk_cache@Base 4.0.1
  nc_set_chunk_cache_ints@Base 4.0.1
@@ -1240,11 +1314,14 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncaux_h5filterspec_fix8@Base 4.8.0
  ncaux_h5filterspec_free@Base 4.8.0
  ncaux_h5filterspec_parse@Base 4.8.0
+ ncaux_h5filterspec_parse_parameter@Base 4.9.0
  ncaux_h5filterspec_parselist@Base 4.8.0
  ncaux_readfile@Base 4.8.0
  ncaux_reclaim_data@Base 4.6.2
+ ncaux_reclaim_data_all@Base 4.9.0
  ncaux_type_alignment@Base 4.6.2
  ncaux_writefile@Base 4.8.0
+ ncbacktrace@Base 4.9.1
  ncbreakpoint@Base 4.8.0
  ncbytesappend@Base 4.1.3
  ncbytesappendn@Base 4.1.3
@@ -1309,6 +1386,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncio_pad_length@Base 3.6.1
  ncio_rel@Base 4.3.3
  ncio_sync@Base 4.3.3
+ nclistclearall@Base 4.9.0
  nclistclone@Base 4.1.3
  nclistconcat@Base 4.1.3
  nclistcontains@Base 4.1.3
@@ -1339,8 +1417,6 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncopen@Base 3.6.1
  ncopts@Base 3.6.1
  ncprintprovenance@Base 4.6.2
- ncrc_freeglobalstate@Base 4.7.1
- ncrc_getglobalstate@Base 4.7.1
  ncrc_initialize@Base 4.8.1
  ncrecget@Base 3.6.1
  ncrecinq@Base 3.6.1
@@ -1349,6 +1425,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncsetfill@Base 3.6.1
  ncsetlogging@Base 4.1.3
  ncsync@Base 3.6.1
+ ncthrow@Base 4.9.0
  nctrace@Base 4.8.0
  nctracelevel@Base 4.8.0
  nctracemore@Base 4.8.0
@@ -1360,6 +1437,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncuntrace@Base 4.8.0
  ncuriappendfragmentkey@Base 4.8.0
  ncuribuild@Base 4.3.3
+ ncuriclone@Base 4.9.0
  ncuridecode@Base 4.3.3
  ncuridecodepartial@Base 4.5.0
  ncuriencodeonly@Base 4.5.0
@@ -1370,8 +1448,10 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncuriparse@Base 4.3.3
  ncuriquerylookup@Base 4.5.0
  ncuriqueryparams@Base 4.7.0
+ ncurirebuild@Base 4.9.0
  ncurisetfragmentkey@Base 4.8.0
  ncurisetfragments@Base 4.7.2
+ ncurisethost@Base 4.9.0
  ncurisetpath@Base 4.8.0
  ncurisetprotocol@Base 4.5.0
  ncurisetquery@Base 4.5.0
@@ -1727,13 +1807,26 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncxcacheprint@Base 4.8.0
  ncxcacheremove@Base 4.8.0
  ncxcachetouch@Base 4.8.0
+ ncxml_attr@Base 4.9.0
+ ncxml_attr_pairs@Base 4.9.0
+ ncxml_child@Base 4.9.0
+ ncxml_child_first@Base 4.9.0
+ ncxml_child_next@Base 4.9.0
+ ncxml_finalize@Base 4.9.0
+ ncxml_free@Base 4.9.0
+ ncxml_initialize@Base 4.9.0
+ ncxml_name@Base 4.9.0
+ ncxml_next@Base 4.9.0
+ ncxml_parse@Base 4.9.0
+ ncxml_root@Base 4.9.0
+ ncxml_text@Base 4.9.0
  ncz_chunking_init@Base 4.8.0
  ncz_close_file@Base 4.8.0
  ncz_closeorabort@Base 4.8.0
  ncz_create_dataset@Base 4.8.0
  ncz_create_fillvalue@Base 4.8.0
  ncz_def_var_chunking_ints@Base 4.8.0
- ncz_dtype2typeinfo@Base 4.8.0
+ ncz_dtype2nctype@Base 4.9.1
  ncz_enddef_netcdf4_file@Base 4.8.0
  ncz_fill_value_sort@Base 4.8.0
  ncz_find_default_chunksizes2@Base 4.8.0
@@ -1741,13 +1834,12 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncz_find_grp_file_var@Base 4.8.0
  ncz_find_grp_var_att@Base 4.8.0
  ncz_get_att_special@Base 4.8.0
- ncz_get_fill_value@Base 4.8.0
  ncz_get_var_meta@Base 4.8.0
  ncz_getattlist@Base 4.8.0
  ncz_gettype@Base 4.8.0
  ncz_initialized@Base 4.8.0
  ncz_makeattr@Base 4.8.0
- ncz_nctype2typeinfo@Base 4.8.1
+ ncz_nctype2dtype@Base 4.9.1
  ncz_open_dataset@Base 4.8.0
  ncz_put_att@Base 4.8.0
  ncz_read_atts@Base 4.8.0
@@ -1758,7 +1850,6 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  ncz_sync_file@Base 4.8.0
  ncz_sync_grp@Base 4.8.0
  ncz_write_var@Base 4.8.0
- ncz_zarr_type_name@Base 4.8.0
  nczm_appendn@Base 4.8.0
  nczm_basename@Base 4.8.0
  nczm_canonicalpath@Base 4.8.0
@@ -1798,6 +1889,7 @@ libnetcdf.so.19 #PACKAGE# #MINVER#
  nczprint_envv@Base 4.8.0
  nczprint_idvector@Base 4.8.0
  nczprint_odom@Base 4.8.0
+ nczprint_paramvector@Base 4.9.0
  nczprint_projection@Base 4.8.0
  nczprint_projectionx@Base 4.8.0
  nczprint_reclaim@Base 4.8.0

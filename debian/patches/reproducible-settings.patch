@@ -12,5 +12,5 @@ Forwarded: not-needed
 -Host System:		@host_cpu@-@host_vendor@-@host_os@
 -Build Directory: 	@abs_top_builddir@
  Install Prefix:         @prefix@
+ Plugin Install Prefix:  @PLUGIN_INSTALL_DIR_SETTING@
  
- # Compiling Options

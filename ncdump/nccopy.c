@@ -15,7 +15,6 @@
 
 #if defined(_WIN32) && !defined(__MINGW32__)
 #include "XGetopt.h"
-#define snprintf _snprintf
 #endif
 
 #ifdef HAVE_UNISTD_H
@@ -32,7 +31,6 @@
 #include "nccomps.h"
 #include "list.h"
 #include "ncpathmgr.h"
-#include "ncfilter.h"
 
 #undef DEBUGFILTER
 #undef DEBUGCHUNK
@@ -244,7 +242,7 @@ computeFQN(VarID vid, char** fqnp)
     *q++ = '\0'; /* guarantee */
     strcat(fqn,escname);
 done:
-    if(stat == NC_NOERR && fqnp != NULL) *fqnp = fqn;
+    if(stat == NC_NOERR && fqnp != NULL) {*fqnp = fqn; fqn = NULL;}
     return stat;
 }
 
@@ -2057,16 +2055,16 @@ copy(char* infile, char* outfile)
 
 	/* Check if any vars in -v don't exist */
     if(missing_vars(igrp, option_nlvars, option_lvars))
-	exit(EXIT_FAILURE);
+	goto fail;
 
     if(option_nlgrps > 0) {
 	if(inkind != NC_FORMAT_NETCDF4) {
 	    error("Group list (-g ...) only permitted for netCDF-4 file");
-	    exit(EXIT_FAILURE);
+	    goto fail;
 	}
 	/* Check if any grps in -g don't exist */
 	if(grp_matches(igrp, option_nlgrps, option_lgrps, option_grpids) == 0)
-	    exit(EXIT_FAILURE);
+	    goto fail;
     }
 
     if(option_write_diskless)
@@ -2146,6 +2144,9 @@ copy(char* infile, char* outfile)
     NC_CHECK(nc_close(igrp));
     NC_CHECK(nc_close(ogrp));
     return stat;
+fail:
+    nc_finalize();
+    exit(EXIT_FAILURE);
 }
 
 /*
@@ -2447,6 +2448,8 @@ main(int argc, char**argv)
     freefilteroptlist(filteroptions);
     filteroptions = NULL;
 #endif /*USE_NETCDF4*/
+
+    nc_finalize();
 
     exit(exitcode);
 }
