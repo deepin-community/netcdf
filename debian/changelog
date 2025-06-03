@@ -1,3 +1,9 @@
+netcdf (1:4.9.2-1deepin1) unstable; urgency=medium
+
+  * feat: add sw64 support.
+
+ -- hudeng <hudeng@deepin.org>  Tue, 03 Jun 2025 09:17:11 +0800
+
 netcdf (1:4.9.2-1deepin) unstable; urgency=medium
 
   * d/patches/fix-doxygen.patch: Fix doxygen error.
