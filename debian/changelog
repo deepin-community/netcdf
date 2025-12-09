@@ -1,3 +1,9 @@
+netcdf (1:4.9.2-1deepin2) unstable; urgency=medium
+
+  * update libnetcdf19.symbols.
+
+ -- lichenggang <lichenggang@deepin.org>  Tue, 09 Dec 2025 10:04:15 +0800
+
 netcdf (1:4.9.2-1deepin1) unstable; urgency=medium
 
   * feat: add sw64 support.
