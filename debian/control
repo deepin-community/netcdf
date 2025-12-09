@@ -62,7 +62,7 @@ Package: libnetcdf-dev
 Architecture: any
 Section: libdevel
 Depends: libnetcdf19 (= ${binary:Version}),
-         libcurl4-gnutls-dev | libcurl-ssl-dev,
+         libcurl4-gnutls-dev,
          libhdf5-dev,
          libxml2-dev,
          ${misc:Depends}
